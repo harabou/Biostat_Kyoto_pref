@@ -4,7 +4,7 @@
 1) Githubの「講義資料」「data」「R-code」から直接ダウンロード
 2) 下記LINKから「Google drive」にアクセスしダウンロードする。
 
-<h4 id="CH01">1　レジュメ</h4>
+<h2 id="CH01">1　レジュメ</h2>
 
 |節・タイトル|講義資料リンク|
 |---|---|
@@ -32,7 +32,7 @@
   <h4 id="CH04">第13回　主成分分析、因子分析、クラスター分析
   <h4 id="CH04">第14-15回　解析実習・まとめ （復習・課題の時間）
 
-<h4 id="CH01">2　講義資料・解析データ</h4>
+<h2 id="CH01">2　講義資料・解析データ</h2>
 
 |実習回|講義資料リンク|
 |---|---|
@@ -41,8 +41,10 @@
 |第3回|[講義資料・解析データ](https://drive.google.com/drive/folders/1Y3nzc_OCyrbT3Z3V6Sww7qJHcv5qycq8?usp=sharing)|
 |第4回|[講義資料・解析データ](https://drive.google.com/drive/folders/1nQlfY9zIlsfy0o3pVJBa4FL49AvFOE9i?usp=sharing)|
 |第5回|[講義資料・解析データ](https://drive.google.com/drive/folders/1iSlN28J5SD1qsjoFsFFfVYhfygVpYAzb?usp=sharing)|
+|補足|[Githubからのデータセット読み込み](https://drive.google.com/file/d/1Aym86YJ1HzOpzsuRsY0iTw7p5pqfHd5f/view?usp=sharing)|
 
-<h4 id="CH01">3　参考資料</h4>
+
+<h2 id="CH01">3　参考資料</h2>
 
 |内容|リンク|
 |---|---|
