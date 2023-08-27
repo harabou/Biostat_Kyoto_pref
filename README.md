@@ -10,8 +10,6 @@
 |レジュメ|[レジュメ](https://drive.google.com/file/d/1vq4fiBWyU8wTeEMFERO35DnQ0qeiL7ib/view?usp=sharing)|
 |実習課題|[レジュメ](https://drive.google.com/file/d/1vq4fiBWyU8wTeEMFERO35DnQ0qeiL7ib/view?usp=sharing)|
 
-
-<h4 id="CH01">2　講義資料・解析データ</h4>
 <h4 id="CH02">　各回の内容の実習内容：
 <h4 id="CH03">第1日目
   <h4 id="CH04">第1回　EZRの使い方、データセットの読み込み、頻度集計、記述統計、相関
@@ -33,6 +31,7 @@
   <h4 id="CH04">第13回　主成分分析、因子分析、クラスター分析
   <h4 id="CH04">第14-15回　解析実習・まとめ （復習・課題の時間）
 
+<h4 id="CH01">2　講義資料・解析データ</h4>
 |実習回|講義資料リンク|
 |---|---|
 |第1回|[講義資料・解析データ](https://drive.google.com/drive/folders/17W9MJdQZ--QhhkW6ikxvw0JW3SvRgFsl?usp=sharing)|
