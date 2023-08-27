@@ -41,3 +41,9 @@
 |第3回|[講義資料・解析データ](https://drive.google.com/drive/folders/1Y3nzc_OCyrbT3Z3V6Sww7qJHcv5qycq8?usp=sharing)|
 |第4回|[講義資料・解析データ](https://drive.google.com/drive/folders/1nQlfY9zIlsfy0o3pVJBa4FL49AvFOE9i?usp=sharing)|
 |第5回|[講義資料・解析データ](https://drive.google.com/drive/folders/1iSlN28J5SD1qsjoFsFFfVYhfygVpYAzb?usp=sharing)|
+
+<h4 id="CH01">3　参考資料</h4>
+
+|内容|リンク|
+|---|---|
+|EZR|[EZR解説](https://drive.google.com/file/d/1q1gDk043NU8RZRZIoUrLRygsSDP2Ij-Z/view?usp=drive_link)|
