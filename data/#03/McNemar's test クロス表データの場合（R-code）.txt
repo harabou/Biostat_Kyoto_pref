@@ -1,0 +1,4 @@
+McNemar's test クロス表データの場合
+
+x <- matrix(c(47,16, 5, 32), ncol=2, byrow=T)
+mcnemar.test(matrix(c(47,16, 5, 32),2,2))
