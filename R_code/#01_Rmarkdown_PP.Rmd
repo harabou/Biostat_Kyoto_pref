@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ----------
 ```{r setup1, include=FALSE}
-health <- read.csv("F:/■■■■■■New＿滋賀医大/■■講義関連/京都府大/講義資料/2024＿R/##第1回/dataset/health3.csv")
+health <- read.csv('https://raw.githubusercontent.com/harabou/Biostat_Kyoto_pref/main/data/%2301/health3.csv')
 (echo = FALSE)
 ```
 
