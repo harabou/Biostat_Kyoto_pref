@@ -1,0 +1,87 @@
+---
+title: "R-studio演習レポート　フォーム"
+author: "A.Harada"
+date: "2024-07-28"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R-studioでの演習
+さきほどのRstudioでの演習をレポート提出用ファイルに仕上げる
+
+
+## 手順
+- Rmarkdownで記述
+- Rmarkdown html modeで指定
+- Rcodeを配置
+- Knitでの掃き出し
+- 確認
+
+
+```{r setup1, include=FALSE}
+##下記は自分の環境に合わせて変更
+health <- read.csv("F:/■■■■■■New＿滋賀医大/■■講義関連/京都府大/講義資料/2024＿R/##第1回/dataset/health3.csv")
+library(tidyverse)
+```
+
+
+
+##boxplot
+```{r box, echo=TRUE}
+g_box<- ggplot(data= health, aes(x = factor(sex), y =　sbp))+geom_boxplot()
+g_box
+```
+
+##histgram
+```{r hist, echo=TRUE}
+g_hist<- ggplot(data= health, aes(x = age)) +geom_histogram(fill="white", color="black")+theme_classic()
+g_hist
+```
+
+##violinplot
+```{r viol, echo=TRUE}
+g_vp<-ggplot(data= health, mapping = aes(x = factor(sex), y = sbp)) +  geom_violin() +  geom_point() +  labs(title = "sex") +  theme_bw() + theme(legend.key = element_blank())
+g_vp
+```
+
+```{r b, include=FALSE}
+library(tableone)
+```
+
+```{r tab, include=FALSE}
+tbl_1 <- CreateTableOne(vars = c("sex","age", "sbp","dbp","salt"), strata="sex",factorVars=c("sex"),data = health)
+```
+
+##table
+```{r tab2, echo=TRUE}
+tbl_1
+```
+
+```{r cor, include=FALSE}
+g_point_2 <- ggplot(data= health, aes(x = sbp, y = dbp))+geom_point () +theme_classic()
+```
+
+##散布図
+```{r cor2, echo=TRUE}
+g_point_2
+```
+
+```{r cor3, include=FALSE}
+attach(health)
+cor(cbind(sbp, dbp))
+cor.test(sbp, dbp)
+cor(sbp , dbp, method="spearman")
+cor(sbp , dbp, method="pearson")
+
+quant<-cbind (health$age, health$sbp, health$dbp, health$salt)
+quant2<-cbind (age, sbp, dbp, salt)
+```
+
+##散布図2
+```{r cor4, Echo=TRUE}
+cor(quant2)
+pairs(quant2)
+```
