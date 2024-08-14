@@ -1,12 +1,12 @@
-#‚Q•W–{•½‹Ï’l
-#nİ’è¨power
+#ï¼’æ¨™æœ¬å¹³å‡å€¤
+#nè¨­å®šâ†’power
 power.t.test(delta=3,sd=4, sig.level=0.05, n=20, type="two.sample")
 
-#powerİ’è¨n
+#powerè¨­å®šâ†’n
 power.t.test(delta=3,sd=4, sig.level=0.05, power=0.8, type="two.sample")
 
 
-#‚Q•W–{•½‹Ï’l(Simulationj
+#ï¼’æ¨™æœ¬å¹³å‡å€¤(Simulationï¼‰
 mypower <- function(n) {
 count <- 0
 for(i in 1:n) {
@@ -25,7 +25,7 @@ mypower(10000)
 
 
 
-#ƒpƒbƒP[ƒW—˜—p
+#ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸åˆ©ç”¨
 install.packages(pwr)
 library(pwr)
 pwr.p.test(h=ES.h(p1=0.75,p2=0.50),
