@@ -1,0 +1,56 @@
+---
+title: "Powerpoint資料"
+author: "harada"
+date: "2024-07-28"
+output: powerpoint_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## R-studioでの演習
+さきほどのRstudioでの演習をスライドプレゼン用に仕上げる
+
+## 手順
+- Rmarkdownで記述
+- Rmarkdown presentation mode（ioslide)で指定
+- Rcodeを配置
+- Knitでの掃き出し
+- 確認
+
+----------
+```{r setup1, include=FALSE}
+health <- read.csv("F:/■■■■■■New＿滋賀医大/■■講義関連/京都府大/講義資料/2024＿R/##第1回/dataset/health3.csv")
+(echo = FALSE)
+```
+
+----------
+```{r setup2, include=FALSE}
+library(tidyverse)
+(echo = FALSE)
+```
+
+##boxplot
+```{r a, echo=TRUE}
+g_box<- ggplot(data= health, aes(x = factor(sex), y =　sbp))+geom_boxplot()
+g_box
+```
+
+--------------------------
+```{r b, include=FALSE}
+library(tableone)
+```
+
+--------------------------
+```{r c, include=FALSE}
+tbl_1 <- CreateTableOne(vars = c("sex","age", "sbp","dbp","salt"), strata="sex",factorVars=c("sex"),data = health)
+```
+
+##散布図2
+```{r d, echo=TRUE}
+g_point_2 <- ggplot(data= health, aes(x = sbp, y = dbp))+geom_point () +theme_classic()
+g_point_2
+
+```
+
