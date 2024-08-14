@@ -5,52 +5,52 @@
 
 
 #--------------------------------------------
-#ƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚ñ‚Åƒf[ƒ^ƒtƒŒ[ƒ€‚ğì¬‚·‚é
-#1:ƒfƒBƒŒƒNƒgƒŠ‚Éƒtƒ@ƒCƒ‹‚ğ•Û‘¶‚µA“Ç‚İ‚İ•û–@
-DF <- read.table( "TokyoSTAT_P25.csv", 
+#ãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚“ã§ãƒ‡ãƒ¼ã‚¿ãƒ•ãƒ¬ãƒ¼ãƒ ã‚’ä½œæˆã™ã‚‹
+#1:ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä¿å­˜ã—ã€èª­ã¿è¾¼ã¿æ–¹æ³•
+DF <- read.table( 'https://raw.githubusercontent.com/harabou/Biostat_Kyoto_pref/main/data/%2305/TokyoSTAT_P25.csv', 
                   sep = ",", 
                   header = TRUE, 
                   stringsAsFactors = FALSE, 
-                  fileEncoding="UTF-8")     #•¶šƒR[ƒh‚ÍUTF-8
-##ƒfƒBƒŒƒNƒgƒŠ‚ÌŠm”F–@
+                  fileEncoding="UTF-8")     #æ–‡å­—ã‚³ãƒ¼ãƒ‰ã¯UTF-8
+##ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã®ç¢ºèªæ³•
 getwd()
 
-#2:GUI‚É‚æ‚é“Ç‚İ‚İ•û–@
-#uEnvironmentv-uimportv‚©‚ç
+#2:GUIã«ã‚ˆã‚‹èª­ã¿è¾¼ã¿æ–¹æ³•
+#ã€ŒEnvironmentã€-ã€Œimportã€ã‹ã‚‰
 #---------------------------------------------
 
 
-#‘æ5“ú–Ú
+#ç¬¬5æ—¥ç›®
 #FA/PCA/CA
 
-#ƒtƒ@ƒCƒ‹‚ğ“Ç‚İ‚ñ‚Åƒf[ƒ^ƒtƒŒ[ƒ€‚ğì¬‚·‚é
-#‚»‚Ì‚P
+#ãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚“ã§ãƒ‡ãƒ¼ã‚¿ãƒ•ãƒ¬ãƒ¼ãƒ ã‚’ä½œæˆã™ã‚‹
+#ãã®ï¼‘
 DF <- read.table( "TokyoSTAT_P25.csv", 
                   sep = ",", 
                   header = TRUE, 
                   stringsAsFactors = FALSE, 
-                  fileEncoding="UTF-8")     #•¶šƒR[ƒh‚ÍUTF-8
-#‚»‚Ì‚Q
-TokyoSTAT_P25 <- read.csv("C:/Users/biostat_35/Desktop/sample20191122 (1)/Ch04/TokyoSTAT_P25.csv")
+                  fileEncoding="UTF-8")     #æ–‡å­—ã‚³ãƒ¼ãƒ‰ã¯UTF-8
+#ãã®ï¼’
+TokyoSTAT_P25 <- read.csv('https://raw.githubusercontent.com/harabou/Biostat_Kyoto_pref/main/data/%2305/TokyoSTAT_P25.csv')
 DF<-TokyoSTAT_P25
 
 
 #============================================================
-####ˆÈŒãuDFvƒf[ƒ^ƒZƒbƒg‚ğg—p‚µ‚Ä‚¢‚­
+####ä»¥å¾Œã€ŒDFã€ãƒ‡ãƒ¼ã‚¿ã‚»ãƒƒãƒˆã‚’ä½¿ç”¨ã—ã¦ã„ã
 
-#write.csv(DF,"DF.csv") #DF.csv, DF.sav‚Ìƒtƒ@ƒCƒ‹‚ğc‚µ‚Ä‚¨‚­
+#write.csv(DF,"DF.csv") #DF.csv, DF.savã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ®‹ã—ã¦ãŠã
 #============================================================
 
-#ƒf[ƒ^‚ÌŠT—v‚ğŠm”F‚·‚é
+#ãƒ‡ãƒ¼ã‚¿ã®æ¦‚è¦ã‚’ç¢ºèªã™ã‚‹
 str(DF)
-summary(DF[, -c(1:2)])@#1—ñ,2—ñ‚Ííœ‚µ‚Ä“Ç‚İ‚ñ‚¾
-DF@#ƒf[ƒ^Šm”F
+summary(DF[, -c(1:2)])ã€€#1åˆ—,2åˆ—ã¯å‰Šé™¤ã—ã¦èª­ã¿è¾¼ã‚“ã 
+DFã€€#ãƒ‡ãƒ¼ã‚¿ç¢ºèª
 
 
 #=================================================
-#ƒ‰ƒCƒuƒ‰ƒŠ‚ÌƒCƒ“ƒXƒg[ƒ‹E“Ç‚İ
-##‚»‚Ì1:install.packages("XXXXXX") library(XXXXX)
-##‚»‚Ì2:GUIuPackagesv‚æ‚è
+#ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ãƒ»èª­è¾¼ã¿
+##ãã®1:install.packages("XXXXXX") library(XXXXX)
+##ãã®2:GUIã€ŒPackagesã€ã‚ˆã‚Š
 #=================================================
 
 install.packages("psych")
@@ -59,103 +59,103 @@ library(psych)
 
 
 
-#å¬•ª•ªÍ
-resultPCA <- prcomp(DF[, -(1:3)], scale=TRUE) #1-3—ñ‚ğœ‚¢‚Äg—p
+#ä¸»æˆåˆ†åˆ†æ
+resultPCA <- prcomp(DF[, -(1:3)], scale=TRUE) #1-3åˆ—ã‚’é™¤ã„ã¦ä½¿ç”¨
 
-#Œ‹‰Ê‚Ì—v–ñ
+#çµæœã®è¦ç´„
 summary(resultPCA)
 
-#Še•Ï”‚²‚Æ‚Ìå¬•ªiŒÅ—LƒxƒNƒgƒ‹j
-#‘æ3å¬•ª‚Ü‚Å•\¦
+#å„å¤‰æ•°ã”ã¨ã®ä¸»æˆåˆ†ï¼ˆå›ºæœ‰ãƒ™ã‚¯ãƒˆãƒ«ï¼‰
+#ç¬¬3ä¸»æˆåˆ†ã¾ã§è¡¨ç¤º
 resultPCA$rotation[, 1:3]
 
-#ŠeƒP[ƒX‚²‚Æ‚Ìå¬•ª“¾“_
-#5©¡‘ÌA‘æ3å¬•ª‚Ü‚Å•\¦
+#å„ã‚±ãƒ¼ã‚¹ã”ã¨ã®ä¸»æˆåˆ†å¾—ç‚¹
+#5è‡ªæ²»ä½“ã€ç¬¬3ä¸»æˆåˆ†ã¾ã§è¡¨ç¤º
 resultPCA$x[1:5, 1:3]
 
-#å¬•ª“¾“_(ƒTƒ“ƒvƒ‹‚²‚Æ‚Ì“_”)‚Ì’l‚ğƒ^ƒeƒˆƒR‚Éƒvƒƒbƒg‚·‚é
+#ä¸»æˆåˆ†å¾—ç‚¹(ã‚µãƒ³ãƒ—ãƒ«ã”ã¨ã®ç‚¹æ•°)ã®å€¤ã‚’ã‚¿ãƒ†ãƒ¨ã‚³ã«ãƒ—ãƒ­ãƒƒãƒˆã™ã‚‹
 biplot(resultPCA)
 
-#å¬•ª“¾“_‚ğƒf[ƒ^ƒtƒŒ[ƒ€‚É•ÏŠ·
+#ä¸»æˆåˆ†å¾—ç‚¹ã‚’ãƒ‡ãƒ¼ã‚¿ãƒ•ãƒ¬ãƒ¼ãƒ ã«å¤‰æ›
 DFpca <- as.data.frame(resultPCA$x)
-#s‚Ì–¼‘O‚ğ©¡‘Ì–¼‚É•ÏŠ·
-rownames(DFpca) <- DF$s’¬‘º
+#è¡Œã®åå‰ã‚’è‡ªæ²»ä½“åã«å¤‰æ›
+rownames(DFpca) <- DF$å¸‚ç”ºæ‘
 
-#å¬•ª“¾“_‚É‚Â‚¢‚Ä—v–ñî•ñ‚ğ•\¦
+#ä¸»æˆåˆ†å¾—ç‚¹ã«ã¤ã„ã¦è¦ç´„æƒ…å ±ã‚’è¡¨ç¤º
 summary(DFpca)[, 1:2]
-#•W€•Î·
+#æ¨™æº–åå·®
 apply(DFpca, 2, sd)[1:2]
 
 #============================================================
-#write.csv(DFpca,"DFpca.csv") #DFpca.csv, DFpca.sav‚Ìƒtƒ@ƒCƒ‹‚ğc‚µ‚Ä‚¨‚­
+#write.csv(DFpca,"DFpca.csv") #DFpca.csv, DFpca.savã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ®‹ã—ã¦ãŠã
 #============================================================
 
-#fa.parallelF•½s•ªÍiPAj‚ÌÀ{i‹Šo“I‚É“KØ‚Èˆöq”‚ğ”»’fj
-#fmˆöq’Šo–@iminresÅ¬c·–@Apaåˆöq–@AmlÅ–Ş–@j
-#‚±‚±‚Å‚ÍÅ–Ş–@‚ğ‘I‘ğ
-#1-2—ñ–Ú‚ÍID‚È‚Ì‚Åœ‚­
-#3—ñ–Ú‚ÍŸŒ³ˆ³k‚Ì‘ÎÛ‚Å‚Í‚È‚¢‚Ì‚Åœ‚­
-result.prl <- fa.parallel(DF[, -(1:3)], fm="ml")  #plot‚ğŠm”F‚Ì‚±‚Æ
+#fa.parallelï¼šå¹³è¡Œåˆ†æï¼ˆPAï¼‰ã®å®Ÿæ–½ï¼ˆè¦–è¦šçš„ã«é©åˆ‡ãªå› å­æ•°ã‚’åˆ¤æ–­ï¼‰
+#fmï¼å› å­æŠ½å‡ºæ³•ï¼ˆminresæœ€å°æ®‹å·®æ³•ã€paä¸»å› å­æ³•ã€mlæœ€å°¤æ³•ï¼‰
+#ã“ã“ã§ã¯æœ€å°¤æ³•ã‚’é¸æŠ
+#1-2åˆ—ç›®ã¯IDãªã®ã§é™¤ã
+#3åˆ—ç›®ã¯æ¬¡å…ƒåœ§ç¸®ã®å¯¾è±¡ã§ã¯ãªã„ã®ã§é™¤ã
+result.prl <- fa.parallel(DF[, -(1:3)], fm="ml")  #plotã‚’ç¢ºèªã®ã“ã¨
 
 
 
-##FAiˆöq•ªÍj‚ÌÀs
+##FAï¼ˆå› å­åˆ†æï¼‰ã®å®Ÿè¡Œ
 
-#faFˆöq•ªÍ‚ÌÀs
-#fmˆöq’Šo–@iminresÅ¬c·–@Apaåˆöq–@AmlÅ–Ş–@j
-#‚±‚±‚Å‚ÍÅ–Ş–@‚ğ‘I‘ğ
-#nfactorsˆöq”i’Šo‚µ‚½‚¢²‚Ì”j
-#rotate‰ñ“]–@i’¼Œğ‰ñ“]:varimax“™AÎŒğ‰ñ“]:promax“™j
-#scoresˆöq“¾“_Zo–@
-#1-2—ñ–Ú‚ÍID‚È‚Ì‚Åœ‚­
-#3—ñ–Ú‚ÍŸŒ³ˆ³k‚Ì‘ÎÛ‚Å‚Í‚È‚¢‚Ì‚Åœ‚­
+#faï¼šå› å­åˆ†æã®å®Ÿè¡Œ
+#fmï¼å› å­æŠ½å‡ºæ³•ï¼ˆminresæœ€å°æ®‹å·®æ³•ã€paä¸»å› å­æ³•ã€mlæœ€å°¤æ³•ï¼‰
+#ã“ã“ã§ã¯æœ€å°¤æ³•ã‚’é¸æŠ
+#nfactorsï¼å› å­æ•°ï¼ˆæŠ½å‡ºã—ãŸã„è»¸ã®æ•°ï¼‰
+#rotateï¼å›è»¢æ³•ï¼ˆç›´äº¤å›è»¢:varimaxç­‰ã€æ–œäº¤å›è»¢:promaxç­‰ï¼‰
+#scoresï¼å› å­å¾—ç‚¹ç®—å‡ºæ³•
+#1-2åˆ—ç›®ã¯IDãªã®ã§é™¤ã
+#3åˆ—ç›®ã¯æ¬¡å…ƒåœ§ç¸®ã®å¯¾è±¡ã§ã¯ãªã„ã®ã§é™¤ã
 
 resultFA <- fa(DF[, -(1:3)],
-               nfactors=3,             #ˆöq”‚ğw’è
-               fm = "ml",              #pa åˆöq–@, ols Å¬“ñæ–@, ml Å–Ş–@
-               rotate = "varimax",     #varimax ’¼ŒğApromax ÎŒğ
-               scores = "regression")  #regression ‰ñ‹A–@
+               nfactors=3,             #å› å­æ•°ã‚’æŒ‡å®š
+               fm = "ml",              #pa ä¸»å› å­æ³•, ols æœ€å°äºŒä¹—æ³•, ml æœ€å°¤æ³•
+               rotate = "varimax",     #varimax ç›´äº¤ã€promax æ–œäº¤
+               scores = "regression")  #regression å›å¸°æ³•
 
-#Œ‹‰Ê‚Ì•\¦
-#digits¬”“_ˆÈ‰º•\¦Œ…‚Ìw’è
-#sort=TRUE‚ğw’èiŠe€–Ú‚²‚Æ‚Ìˆöq•‰‰×—Ê‚ªƒ\[ƒg‚³‚ê‚éj
+#çµæœã®è¡¨ç¤º
+#digitsï¼å°æ•°ç‚¹ä»¥ä¸‹è¡¨ç¤ºæ¡ã®æŒ‡å®š
+#sort=TRUEã‚’æŒ‡å®šï¼ˆå„é …ç›®ã”ã¨ã®å› å­è² è·é‡ãŒã‚½ãƒ¼ãƒˆã•ã‚Œã‚‹ï¼‰
 print(resultFA, digits=2, sort=TRUE) 
 
-#Œ‹‰Ê‚ğ}‚Å•\¦
+#çµæœã‚’å›³ã§è¡¨ç¤º
 fa.diagram(resultFA, 
-           rsize=0.9, e.size=3.0, #lŠp‚Æ‰~‚ÌƒTƒCƒY
-           marg=c(.9,9,.9,.9),    #—]”’‚Ìİ’è
-           cex=.1)                #•¶šƒTƒCƒY
+           rsize=0.9, e.size=3.0, #å››è§’ã¨å††ã®ã‚µã‚¤ã‚º
+           marg=c(.9,9,.9,.9),    #ä½™ç™½ã®è¨­å®š
+           cex=.1)                #æ–‡å­—ã‚µã‚¤ã‚º
 
-#Œ‹‰Ê‚ÌŒ©•û
-#MRi...FŠe€–Ú‚²‚Æ‚Ìˆöq•‰‰×—ÊiŠe•Ï”‚ª‚Ç‚ê‚¾‚¯ˆöq‚ÉŠñ—^‚µ‚Ä‚¢‚é‚©j
-#h2F‹¤’Ê«--Še•Ï”‚Ì’l‚Ì•Ï“®‚ªˆöq‚Å‚Ç‚ê‚¾‚¯à–¾‚Å‚«‚é‚©‚ğ•\‚·
-#u21-h2F“Æ©«iuniquenessj--æ‚è‚±‚Ú‚µ‚Ì“x‡i‹~‚¦‚È‚©‚Á‚½î•ñj
+#çµæœã®è¦‹æ–¹
+#MRi...ï¼šå„é …ç›®ã”ã¨ã®å› å­è² è·é‡ï¼ˆå„å¤‰æ•°ãŒã©ã‚Œã ã‘å› å­ã«å¯„ä¸ã—ã¦ã„ã‚‹ã‹ï¼‰
+#h2ï¼šå…±é€šæ€§--å„å¤‰æ•°ã®å€¤ã®å¤‰å‹•ãŒå› å­ã§ã©ã‚Œã ã‘èª¬æ˜ã§ãã‚‹ã‹ã‚’è¡¨ã™
+#u2ï¼1-h2ï¼šç‹¬è‡ªæ€§ï¼ˆuniquenessï¼‰--å–ã‚Šã“ã¼ã—ã®åº¦åˆï¼ˆæ•‘ãˆãªã‹ã£ãŸæƒ…å ±ï¼‰
 
-#ˆöq•‰‰×—Ê(•Ï”‚²‚Æ‚Ìˆöq‚Ö‚ÌŠñ—^)‚Ì’l‚ğƒ^ƒeƒˆƒR‚Éƒvƒƒbƒg‚·‚é
-#ˆöq•‰‰×—Ê‚ÍAresultFA‚Ì’†‚Ìloadings‚ÉŠi”[‚³‚ê‚Ä‚¢‚é
+#å› å­è² è·é‡(å¤‰æ•°ã”ã¨ã®å› å­ã¸ã®å¯„ä¸)ã®å€¤ã‚’ã‚¿ãƒ†ãƒ¨ã‚³ã«ãƒ—ãƒ­ãƒƒãƒˆã™ã‚‹
+#å› å­è² è·é‡ã¯ã€resultFAã®ä¸­ã®loadingsã«æ ¼ç´ã•ã‚Œã¦ã„ã‚‹
 
 
 
-#‘æ1ˆöq‚Æ‘æ2ˆöq
-#˜g‚Ì‚İ‚ğì¬‚·‚é
-#type="n"‚Å“_‚ğ•`‚©‚È‚¢
+#ç¬¬1å› å­ã¨ç¬¬2å› å­
+#æ ã®ã¿ã‚’ä½œæˆã™ã‚‹
+#type="n"ã§ç‚¹ã‚’æã‹ãªã„
 plot(resultFA$loadings[, 1],
      resultFA$loadings[, 2], type="n") 
-#˜g“à‚ÉƒeƒLƒXƒg‚ğ•\¦‚·‚é
-#   ƒeƒLƒXƒg‚Íˆöq•‰‰×—Ê‚ÌƒŠƒXƒg‚Ìs‚Ì–¼‘O‚ğæ“¾‚µ‚Äg‚¤
+#æ å†…ã«ãƒ†ã‚­ã‚¹ãƒˆã‚’è¡¨ç¤ºã™ã‚‹
+#   ãƒ†ã‚­ã‚¹ãƒˆã¯å› å­è² è·é‡ã®ãƒªã‚¹ãƒˆã®è¡Œã®åå‰ã‚’å–å¾—ã—ã¦ä½¿ã†
 text(resultFA$loadings[, 1],
      resultFA$loadings[, 2], 
      rownames(resultFA$loadings), col="steelblue")
-#y=0‚Ì’¼ü‚ğˆø‚­
-#   “_(-1, 0)‚©‚ç“_(1, 0)‚Ü‚Åü‚ğˆø‚¯‚Î‚æ‚¢
-#   lines(X, Y)‚ÅX‚ÆY‚ÌƒxƒNƒgƒ‹‚ğw’è‚·‚éiU•z}‚Æ“¯‚¶j
+#y=0ã®ç›´ç·šã‚’å¼•ã
+#   ç‚¹(-1, 0)ã‹ã‚‰ç‚¹(1, 0)ã¾ã§ç·šã‚’å¼•ã‘ã°ã‚ˆã„
+#   lines(X, Y)ã§Xã¨Yã®ãƒ™ã‚¯ãƒˆãƒ«ã‚’æŒ‡å®šã™ã‚‹ï¼ˆæ•£å¸ƒå›³ã¨åŒã˜ï¼‰
 lines(c(-1, 1), c(0, 0), col="grey")
-#x=0‚Ì’¼ü‚ğˆø‚­
-#   “_(0, -1)‚©‚ç“_(0, 1)‚Ü‚Åü‚ğˆø‚¯‚Î‚æ‚¢
+#x=0ã®ç›´ç·šã‚’å¼•ã
+#   ç‚¹(0, -1)ã‹ã‚‰ç‚¹(0, 1)ã¾ã§ç·šã‚’å¼•ã‘ã°ã‚ˆã„
 lines(c(0, 0), c(-1, 1), col="grey")
 
-#‘æ3ˆöq‚Æ‘æ2ˆöq‚É‚Â‚¢‚Ä‚à“¯—l
+#ç¬¬3å› å­ã¨ç¬¬2å› å­ã«ã¤ã„ã¦ã‚‚åŒæ§˜
 plot(resultFA$loadings[, 3],
      resultFA$loadings[, 2], type="n")
 text(resultFA$loadings[, 3],
@@ -169,45 +169,45 @@ lines(c(0, 0), c(-1, 1), col="grey")
 
 
 
-#ˆöq“¾“_(ƒP[ƒX‚²‚Æ‚Ì“¾“_)‚ÍresultFA‚Ì’†‚Ìscores‚ÉŠi”[‚³‚ê‚Ä‚¢‚é
+#å› å­å¾—ç‚¹(ã‚±ãƒ¼ã‚¹ã”ã¨ã®å¾—ç‚¹)ã¯resultFAã®ä¸­ã®scoresã«æ ¼ç´ã•ã‚Œã¦ã„ã‚‹
 head(resultFA$scores)
 
-#ˆöq“¾“_‚ğƒf[ƒ^ƒtƒŒ[ƒ€‚É•ÏŠ·
+#å› å­å¾—ç‚¹ã‚’ãƒ‡ãƒ¼ã‚¿ãƒ•ãƒ¬ãƒ¼ãƒ ã«å¤‰æ›
 DFfa <- as.data.frame(resultFA$scores)
-#s‚Ì–¼‘O‚ğ©¡‘Ì–¼‚É•ÏŠ·
-rownames(DFfa) <- DF$s’¬‘º
+#è¡Œã®åå‰ã‚’è‡ªæ²»ä½“åã«å¤‰æ›
+rownames(DFfa) <- DF$å¸‚ç”ºæ‘
 
-#ˆÓ–¡‚ğl‚¦‚Äˆöq‚É–¼‘O‚ğ•t‚¯‚é
-names(DFfa) = c("ƒrƒWƒlƒX“x","“s‰ï¶Šˆ“x","”ñ‚—î‰»“x")
+#æ„å‘³ã‚’è€ƒãˆã¦å› å­ã«åå‰ã‚’ä»˜ã‘ã‚‹
+names(DFfa) = c("ãƒ“ã‚¸ãƒã‚¹åº¦","éƒ½ä¼šç”Ÿæ´»åº¦","éé«˜é½¢åŒ–åº¦")
 head(DFfa)
 
-#ˆöq“¾“_‚É‚Â‚¢‚Ä—v–ñî•ñ‚ğ•\¦
+#å› å­å¾—ç‚¹ã«ã¤ã„ã¦è¦ç´„æƒ…å ±ã‚’è¡¨ç¤º
 summary(DFfa)
-#•W€•Î·
+#æ¨™æº–åå·®
 apply(DFfa, 2, sd)
 
 
 #============================================================
-#write.csv(DFfa,"fascore.csv")  #fascore.csv, fascore.sav‚Ìƒtƒ@ƒCƒ‹‚ğc‚µ‚Ä‚¨‚­
+#write.csv(DFfa,"fascore.csv")  #fascore.csv, fascore.savã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ®‹ã—ã¦ãŠã
 #============================================================
 
 
-##ˆöq•ªÍŒ‹‰Ê‚ğ—˜—p‚µ‚½ƒNƒ‰ƒXƒ^[•ªÍ
+##å› å­åˆ†æçµæœã‚’åˆ©ç”¨ã—ãŸã‚¯ãƒ©ã‚¹ã‚¿ãƒ¼åˆ†æ
 
 #==========================
-#ŠK‘wƒNƒ‰ƒXƒ^[
+#éšå±¤ã‚¯ãƒ©ã‚¹ã‚¿ãƒ¼
 #===========================
-distance <- dist(DFfa) #ƒ†[ƒNƒŠƒbƒh‹——£‚ğ‹‚ß‚é
-# ÷Œ`}ì¬
+distance <- dist(DFfa) #ãƒ¦ãƒ¼ã‚¯ãƒªãƒƒãƒ‰è·é›¢ã‚’æ±‚ã‚ã‚‹
+# æ¨¹å½¢å›³ä½œæˆ
 hc <- hclust(distance, "ward.D2")
 plot(hc)
 res <- cutree(hc, k =4)
 write.csv(res,"resultDF.csv")
 
-DFf <- cbind(DFfa, res)  #—ñ‚Ç‚¤‚µ‚ğŒ‹‡
+DFf <- cbind(DFfa, res)  #åˆ—ã©ã†ã—ã‚’çµåˆ
 
 #=====================
-#k-means–@
+#k-meansæ³•
 #====================
 kmDF <- kmeans(DFfa,4) 
 
@@ -215,51 +215,51 @@ result_km <- kmDF$cluster
 write.csv(result_km,"result_km.csv")
 
 
-#ƒOƒ‰ƒt•`‰æ
+#ã‚°ãƒ©ãƒ•æç”»
 library(cluster)
 clusplot(DF, kmDF$cluster, color=TRUE, shade=TRUE, labels=2, lines=0)
 
-##ÅIƒf[ƒ^ƒZƒbƒg
-DF <- cbind(DF, result_km)  #—ñ‚Ç‚¤‚µ‚ğŒ‹‡
+##æœ€çµ‚ãƒ‡ãƒ¼ã‚¿ã‚»ãƒƒãƒˆ
+DF <- cbind(DF, result_km)  #åˆ—ã©ã†ã—ã‚’çµåˆ
 write.csv(DF,"DF_all.csv")
 #============================================================
-#write.csv(DF,"DF_all.csv")  #DF_all.csv, DF_all.sav‚Ìƒtƒ@ƒCƒ‹‚ğc‚µ‚Ä‚¨‚­
+#write.csv(DF,"DF_all.csv")  #DF_all.csv, DF_all.savã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ®‹ã—ã¦ãŠã
 #============================================================
 
 
 #================================
-#ƒNƒ‰ƒXƒ^[‚ğg—p‚µ‚½‘®«‚Ì”äŠr
+#ã‚¯ãƒ©ã‚¹ã‚¿ãƒ¼ã‚’ä½¿ç”¨ã—ãŸå±æ€§ã®æ¯”è¼ƒ
 #================================
 
 install.packages(tableone)
 library(tableone)
-all <- CreateTableOne(vars = c("l‹C“x", "ƒrƒWƒlƒX“x","“s‰ï¶Šˆ“x","”ñ‚—î‰»“x"), strata="res",factorVars=c("res"),data = DF)
+all <- CreateTableOne(vars = c("äººæ°—åº¦", "ãƒ“ã‚¸ãƒã‚¹åº¦","éƒ½ä¼šç”Ÿæ´»åº¦","éé«˜é½¢åŒ–åº¦"), strata="res",factorVars=c("res"),data = DF)
 
 all
 
 
 
 
-##----/ˆÈ‰º@candy_bar DATA/-------------------------------------------------
+##----/ä»¥ä¸‹ã€€candy_bar DATA/-------------------------------------------------
 
 #==================================
-##ƒNƒ‰ƒXƒ^[•ªÍ
+##ã‚¯ãƒ©ã‚¹ã‚¿ãƒ¼åˆ†æ
 #==================================
-# ”ñ—Ş—“xi‹——£j‚ğŒvZ
+# éé¡ä¼¼åº¦ï¼ˆè·é›¢ï¼‰ã‚’è¨ˆç®—
 
-candy_bars <- read_sav("D:/¡‹“s•{‘å/u‹`‘—¿/¡2023_R/##‘æ5‰ñ/dataset/candy_bars.sav")
+candy_bars <- read_sav("D:/â– äº¬éƒ½åºœå¤§/è¬›ç¾©è³‡æ–™/â– 2023_R/##ç¬¬5å›/dataset/candy_bars.sav")
 
 
 data <- candy_bars[,8:13]
 data
-distance <- dist(data) #ƒ†[ƒNƒŠƒbƒh‹——£‚ğ‹‚ß‚é
+distance <- dist(data) #ãƒ¦ãƒ¼ã‚¯ãƒªãƒƒãƒ‰è·é›¢ã‚’æ±‚ã‚ã‚‹
 
-# ÷Œ`}ì¬
+# æ¨¹å½¢å›³ä½œæˆ
 hc <- hclust(distance, "ward.D2")
 plot(hc)
 res <- cutree(hc, k =4)
 
-##•Ê
+##åˆ¥
 library(tidyverse)
 hc %>% factoextra::fviz_dend(
   k=4,
@@ -273,7 +273,7 @@ hc %>% factoextra::fviz_dend(
 answer <- candy_bars[,2]
 table <- table(answer, res)
 
-#datao—Í
+#dataå‡ºåŠ›
 write.csv( table,"table.csv")
 write.csv(res,"res.csv")
 
@@ -293,7 +293,7 @@ library(cluster)
 clusplot(data, km$cluster, color=TRUE, shade=TRUE, labels=2, lines=0)
 
 
-#ƒNƒ‰ƒXƒ^[”‚ÌŒŸ“¢
+#ã‚¯ãƒ©ã‚¹ã‚¿ãƒ¼æ•°ã®æ¤œè¨
 install.packages(factoextra)
 library(factoextra)
 
@@ -306,7 +306,7 @@ gridExtra::grid.arrange(f[[1]],f[[2]],f[[3]],f[[4]],ncol=2)
 fviz_nbclust(data,kmeans, method="wss")
 
 
-#datao—Í 
+#dataå‡ºåŠ› 
 table2 <- table(answer, result2)
 write.csv(table2,"table2.csv")
 
