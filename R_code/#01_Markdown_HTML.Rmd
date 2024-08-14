@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r setup1, include=FALSE}
 ##下記は自分の環境に合わせて変更
-health <- read.csv("F:/■■■■■■New＿滋賀医大/■■講義関連/京都府大/講義資料/2024＿R/##第1回/dataset/health3.csv")
+health <- read.csv("'https://raw.githubusercontent.com/harabou/Biostat_Kyoto_pref/main/data/%2301/health3.csv'")
 library(tidyverse)
 ```
 
