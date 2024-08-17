@@ -1,9 +1,9 @@
 
-#Health‚ğ—p‚¢‚½WŒv
-#ƒf[ƒ^‚Ì“Ç‚İ‚İ
+#Healthã‚’ç”¨ã„ãŸé›†è¨ˆ
+#ãƒ‡ãƒ¼ã‚¿ã®èª­ã¿è¾¼ã¿
 healthc <-read.csv('https://raw.githubusercontent.com/harabou/Biostat_Kyoto_pref/main/data/%2301/health3.csv')
 
-##Tableohealthc <- ne@WŒv•\‚Ìì¬
+##Tableohealthc <- neã€€é›†è¨ˆè¡¨ã®ä½œæˆ
 
 library(tableone)
 tbl_1 <- CreateTableOne(vars = c("sex","age", "sbp","dbp","salt","HTN_c"), strata="sex",factorVars=c("sex","HTN_c"),data = healthc)
@@ -24,7 +24,7 @@ tbl_1
 ##      4                 15 ( 6.1)      16 (  9.0)             
 ##      5                  1 ( 0.4)       2 (  1.1)             
 ##      6                  0 ( 0.0)       1 (  0.6)
-##tidyverse ƒOƒ‰ƒtì¬‚Ì‚½‚ß“±“ü
+##tidyverse ã‚°ãƒ©ãƒ•ä½œæˆã®ãŸã‚å°å…¥
 
 library(tidyverse)
 ## -- Attaching packages --------------------------------------- tidyverse 1.3.2 --
@@ -36,24 +36,24 @@ library(tidyverse)
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()
 install.packages("tidyverse")
-## Warning: ƒpƒbƒP[ƒW 'tidyverse' ‚Íg—p’†‚Ì‚½‚ßAƒCƒ“ƒXƒg[ƒ‹‚³‚ê‚Ü‚¹‚ñ
-##plot@íX‚ÌƒOƒ‰ƒt
+## Warning: ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ 'tidyverse' ã¯ä½¿ç”¨ä¸­ã®ãŸã‚ã€ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã•ã‚Œã¾ã›ã‚“
+##plotã€€ç¨®ã€…ã®ã‚°ãƒ©ãƒ•
 g_point_2 <- ggplot(data= healthc, aes(x = sbp, y = dbp))+geom_point () +theme_classic()
 g_point_2
 
 
-##boxplot@” ‚Ğ‚°}
+##boxplotã€€ç®±ã²ã’å›³
 g_box<- ggplot(data= healthc, aes(x = factor(sex), y = sbp))+geom_boxplot()
 g_box
 
 
-##histgram@ƒqƒXƒgƒOƒ‰ƒ€
+##histgramã€€ãƒ’ã‚¹ãƒˆã‚°ãƒ©ãƒ 
 g_hist<- ggplot(data= healthc, aes(x = age)) +geom_histogram(fill="white", color="black")+theme_classic()
 g_hist
 ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
 
-##violinplot@
+##violinplotã€€
 g_vp<-ggplot(data= healthc, mapping = aes(x = factor(sex), y = sbp)) +
   geom_violin() +
   geom_point() +
@@ -63,7 +63,7 @@ g_vp<-ggplot(data= healthc, mapping = aes(x = factor(sex), y = sbp)) +
 g_vp
 
 
-##‘ŠŠÖ Correlation
+##ç›¸é–¢ Correlation
 
 attach(healthc)
 cor(cbind(sbp, dbp))
@@ -97,19 +97,19 @@ cor(quant2)
 pairs(quant2)
 
 
-#‚Q“ú–Ú
+#ï¼’æ—¥ç›®
 
-##tŒŸ’è‰‰K
+##tæ¤œå®šæ¼”ç¿’
 
-##Darwinfs corn data
+##Darwinâ€™s corn data
 
 corn <- read.csv("https://raw.githubusercontent.com/harabou/Biostat_Kyoto_pref/main/data/%2302/darwin.csv")
 
-# psych‚ğg—p
+# psychã‚’ä½¿ç”¨
 library(psych)
 ## 
-##  Ÿ‚ÌƒpƒbƒP[ƒW‚ğ•t‚¯‰Á‚¦‚Ü‚·: 'psych'
-##  ˆÈ‰º‚ÌƒIƒuƒWƒFƒNƒg‚Í 'package:ggplot2' ‚©‚çƒ}ƒXƒN‚³‚ê‚Ä‚¢‚Ü‚·: 
+##  æ¬¡ã®ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã‚’ä»˜ã‘åŠ ãˆã¾ã™: 'psych'
+##  ä»¥ä¸‹ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¯ 'package:ggplot2' ã‹ã‚‰ãƒã‚¹ã‚¯ã•ã‚Œã¦ã„ã¾ã™: 
 ## 
 ##      %+%, alpha
 describe(corn)
@@ -117,7 +117,7 @@ describe(corn)
 ##       vars  n  mean   sd median trimmed  mad min  max range  skew kurtosis   se
 ## group    1 30  1.50 0.51   1.50    1.50 0.74   1  2.0   1.0  0.00    -2.07 0.09
 ## len      2 30 18.88 3.18  18.88   19.17 3.34  12 23.5  11.5 -0.61    -0.44 0.58
-##boxplot@” ‚Ğ‚°}
+##boxplotã€€ç®±ã²ã’å›³
 
 g_box_c<- ggplot(data= corn, aes(x = factor(group), y = len))+geom_boxplot()
 g_box_c
@@ -149,14 +149,14 @@ wilcox.test(len ~ group, data=corn)
 
 
 
-#‚R“ú–Ú
+#ï¼“æ—¥ç›®
 
-##ƒÔ2æŒŸ’è/Fisherfs exact
+##Ï‡2ä¹—æ¤œå®š/Fisherâ€™s exact
 
-##ƒNƒƒX•\Œ^‚É‚æ‚éw’è
+##ã‚¯ãƒ­ã‚¹è¡¨å‹ã«ã‚ˆã‚‹æŒ‡å®š
 
-#ƒŠƒ…[ƒ}ƒ`–ò‚ÌŒ±
-#ƒZƒ‹‚Ì”š‚ğ“Ç‚İ‚Ş
+#ãƒªãƒ¥ãƒ¼ãƒãƒè–¬ã®è©¦é¨“
+#ã‚»ãƒ«ã®æ•°å­—ã‚’èª­ã¿è¾¼ã‚€
 testresults2 <- matrix( c(28,13, 14,29), nrow=2, byrow=T) 
 chisq.test(testresults2)   
 
@@ -177,24 +177,24 @@ fisher.test(testresults2)
 ## sample estimates:
 ## odds ratio 
 ##   4.375354
-#ƒ}ƒNƒlƒ}[ŒŸ’è(‘Î‰‚Ì‚ ‚éƒf[ƒ^j)
-#˜’É‚Ì—L–³
+#ãƒã‚¯ãƒãƒãƒ¼æ¤œå®š(å¯¾å¿œã®ã‚ã‚‹ãƒ‡ãƒ¼ã‚¿ï¼‰)
+#è…°ç—›ã®æœ‰ç„¡
 mcnemar.test(matrix(c(47, 16, 5, 32), 2, 2))
 ## 
 ##  McNemar's Chi-squared test with continuity correction
 ## 
 ## data:  matrix(c(47, 16, 5, 32), 2, 2)
 ## McNemar's chi-squared = 4.7619, df = 1, p-value = 0.0291
-#—¼e‚Ì‚Ç‚¿‚ç‚É‘Š’k‚·‚é‚©‚Ç‚¤‚©
+#ä¸¡è¦ªã®ã©ã¡ã‚‰ã«ç›¸è«‡ã™ã‚‹ã‹ã©ã†ã‹
 mcnemar.test(matrix(c(32, 48, 8, 12), 2, 2))
 ## 
 ##  McNemar's Chi-squared test with continuity correction
 ## 
 ## data:  matrix(c(32, 48, 8, 12), 2, 2)
 ## McNemar's chi-squared = 27.161, df = 1, p-value = 1.872e-07
-#‘æ‚R“ú–Ú
+#ç¬¬ï¼“æ—¥ç›®
 
-##d‰ñ‹A•ªÍ@Linear regression
+##é‡å›å¸°åˆ†æã€€Linear regression
 
 ###An example is shown in Ans1. This is applied to Ans2 through Ans4 as a reference.
 
@@ -230,7 +230,7 @@ select <- read.csv("https://raw.githubusercontent.com/harabou/Biostat_Kyoto_pref
 
 data(select)
 ## Warning in data(select): data set 'select' not found
-# fit1‚É‰ñ‹Aƒ‚ƒfƒ‹‚ğŠi”[‚·‚é
+# fit1ã«å›å¸°ãƒ¢ãƒ‡ãƒ«ã‚’æ ¼ç´ã™ã‚‹
 fit1 <- lm(formula = y ~ x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9 + x10 + x11 + x12 + x13 + x14 +x15, data = select) 
 
 res1 <- step(fit1)
@@ -445,11 +445,11 @@ summary(res1)
 ## Residual standard error: 1.046 on 95 degrees of freedom
 ## Multiple R-squared:  0.7239, Adjusted R-squared:  0.7123 
 ## F-statistic: 62.27 on 4 and 95 DF,  p-value: < 2.2e-16
-##MASS‚É‚æ‚é•û–@
+##MASSã«ã‚ˆã‚‹æ–¹æ³•
 library(MASS)
 ## 
-##  Ÿ‚ÌƒpƒbƒP[ƒW‚ğ•t‚¯‰Á‚¦‚Ü‚·: 'MASS'
-##  ˆÈ‰º‚ÌƒIƒuƒWƒFƒNƒg‚Í 'package:dplyr' ‚©‚çƒ}ƒXƒN‚³‚ê‚Ä‚¢‚Ü‚·: 
+##  æ¬¡ã®ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã‚’ä»˜ã‘åŠ ãˆã¾ã™: 'MASS'
+##  ä»¥ä¸‹ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¯ 'package:dplyr' ã‹ã‚‰ãƒã‚¹ã‚¯ã•ã‚Œã¦ã„ã¾ã™: 
 ## 
 ##      select
 res2 <- stepAIC(fit1, direction="both")
@@ -738,21 +738,21 @@ res2$anova
 
 
 
-#‚S“ú–Ú
+#ï¼”æ—¥ç›®
 
-##•ªU•ªÍ ## AnovaŒN‚ğg—p
+##åˆ†æ•£åˆ†æ ## Anovaå›ã‚’ä½¿ç”¨
 
-#ANOVAŒN“Ç‚İ‚İ
+#ANOVAå›èª­ã¿è¾¼ã¿
 source("https://raw.githubusercontent.com/harabou/Biostat_Kyoto_pref/main/R_code/anovakun_487.txt", encoding = 'UTF-8')
 ##anovakun
-##1 hospital data@ˆêŒ³”z’u•ªU•ªÍ
+##1 hospital dataã€€ä¸€å…ƒé…ç½®åˆ†æ•£åˆ†æ
 hospitalx <- read.csv("https://raw.githubusercontent.com/harabou/Biostat_Kyoto_pref/main/data/%2304/hospitalx.csv")
 
 
 anovakun(hospitalx,"As",3)
-###anovaŒN‚Ì•Ï”w’è•û–@
-###”íŒ±ÒŠÔ—vˆö‚Íusv‚Ì¶‘¤‚ÉA‚Æ‚µ‚Äw’èA”íŒ±Ò“à—vˆö‚Íusv‚Ì‰E‘¤‚Éw’è‚·‚éB
-### 3‚ÍŠe—vˆö‚Ì…€‚Ì”‚±‚Ìê‡iA, B, Cj
+###anovaå›ã®å¤‰æ•°æŒ‡å®šæ–¹æ³•
+###è¢«é¨“è€…é–“è¦å› ã¯ã€Œsã€ã®å·¦å´ã«Aã¨ã—ã¦æŒ‡å®šã€è¢«é¨“è€…å†…è¦å› ã¯ã€Œsã€ã®å³å´ã«æŒ‡å®šã™ã‚‹ã€‚
+### 3ã¯å„è¦å› ã®æ°´æº–ã®æ•°ã“ã®å ´åˆï¼ˆA, B, Cï¼‰
 
 #Rat data 1way ANOVA
 anova_tate <- read.csv("https://raw.githubusercontent.com/harabou/Biostat_Kyoto_pref/main/data/%2304/anova_tate.csv")
@@ -824,9 +824,9 @@ anovakun(anova_tate,"As",5)
 ## 
 ## 
 ## output is over --------------------///
-###anovaŒN‚Ì•Ï”w’è•û–@
-###”íŒ±ÒŠÔ—vˆö‚Íusv‚Ì¶‘¤‚ÉA‚Æ‚µ‚Äw’èA”íŒ±Ò“à—vˆö‚Íusv‚Ì‰E‘¤‚Éw’è‚·‚éB
-### 5‚ÍŠe—vˆö‚Ì…€‚Ì”‚±‚Ìê‡iA1, A2, A3,A4,A5j
+###anovaå›ã®å¤‰æ•°æŒ‡å®šæ–¹æ³•
+###è¢«é¨“è€…é–“è¦å› ã¯ã€Œsã€ã®å·¦å´ã«Aã¨ã—ã¦æŒ‡å®šã€è¢«é¨“è€…å†…è¦å› ã¯ã€Œsã€ã®å³å´ã«æŒ‡å®šã™ã‚‹ã€‚
+### 5ã¯å„è¦å› ã®æ°´æº–ã®æ•°ã“ã®å ´åˆï¼ˆA1, A2, A3,A4,A5ï¼‰
 
 
 
@@ -915,11 +915,11 @@ anovakun(dogx,"sA",5,holm=T, mau=T,eta=T)
 ## 
 ## 
 ## output is over --------------------///
-###anovaŒN‚Ì•Ï”w’è•û–@
-###”íŒ±Ò“à—vˆö‚Íusv‚Ì‰E‘¤‚Éw’è‚·‚éB‚±‚Ìê‡”½•œ‘ª’è‚Ì‚½‚ß
-### 5‚ÍŠe—vˆö‚Ì…€‚Ì”‚±‚Ìê‡it1, t2, t3,t4,t5j
-### mau = TFMauchly‚Ì‹…–Ê«ŒŸ’èiƒfƒtƒHƒ‹ƒg‚ÍAMendoza‚Ì‘½•W–{‹…–Ê«ŒŸ’èj 
-### ulong = Tv‚Æ‚·‚é‚ÆCƒƒ“ƒOŒ`®‚Ìƒf[ƒ^‚ğ“Ç‚İ‚ñ‚Åˆ—
+###anovaå›ã®å¤‰æ•°æŒ‡å®šæ–¹æ³•
+###è¢«é¨“è€…å†…è¦å› ã¯ã€Œsã€ã®å³å´ã«æŒ‡å®šã™ã‚‹ã€‚ã“ã®å ´åˆåå¾©æ¸¬å®šã®ãŸã‚
+### 5ã¯å„è¦å› ã®æ°´æº–ã®æ•°ã“ã®å ´åˆï¼ˆt1, t2, t3,t4,t5ï¼‰
+### mau = Tï¼šMauchlyã®çƒé¢æ€§æ¤œå®šï¼ˆãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã¯ã€Mendozaã®å¤šæ¨™æœ¬çƒé¢æ€§æ¤œå®šï¼‰ 
+### ã€Œlong = Tã€ã¨ã™ã‚‹ã¨ï¼Œãƒ­ãƒ³ã‚°å½¢å¼ã®ãƒ‡ãƒ¼ã‚¿ã‚’èª­ã¿è¾¼ã‚“ã§å‡¦ç†
 #Blood pressure 
 BP <- read.csv("D:/BP.csv")
 anovakun(BP,"AsB",holm=T, mau=T,eta=T,long=T)
@@ -999,9 +999,9 @@ anovakun(BP,"AsB",holm=T, mau=T,eta=T,long=T)
 ## 
 ## 
 ## output is over --------------------///
-###anovaŒN‚Ì•Ï”w’è•û–@
-###”íŒ±ÒŠÔ—vˆö‚Íusv‚Ì¶‘¤‚Éw’è‚·‚éB”íŒ±Ò“à—vˆö‚Íusv‚Ì‰E‘¤‚Éw’è‚·‚éB
-###ƒf[ƒ^‚Íƒƒ“ƒOi‰¡jŒ^
+###anovaå›ã®å¤‰æ•°æŒ‡å®šæ–¹æ³•
+###è¢«é¨“è€…é–“è¦å› ã¯ã€Œsã€ã®å·¦å´ã«æŒ‡å®šã™ã‚‹ã€‚è¢«é¨“è€…å†…è¦å› ã¯ã€Œsã€ã®å³å´ã«æŒ‡å®šã™ã‚‹ã€‚
+###ãƒ‡ãƒ¼ã‚¿ã¯ãƒ­ãƒ³ã‚°ï¼ˆæ¨ªï¼‰å‹
 #Two-wayANOVA
 twoway <- read.csv("D:/twoway.csv")
 anovakun(twoway,"ABs",3,2,holm=T)
@@ -1098,5 +1098,5 @@ anovakun(twoway,"ABs",3,2,holm=T)
 ## ----------------------------------------------------------
 ## 
 ## output is over --------------------///
-###”íŒ±ÒŠÔ—vˆö‚Íusv‚Ì¶‘¤‚Éw’è‚·‚éB
-###‚±‚Ìê‡‚ÍA“ñ—vˆöi«•ÊA–òÜj
+###è¢«é¨“è€…é–“è¦å› ã¯ã€Œsã€ã®å·¦å´ã«æŒ‡å®šã™ã‚‹ã€‚
+###ã“ã®å ´åˆã¯ã€äºŒè¦å› ï¼ˆæ€§åˆ¥ã€è–¬å‰¤ï¼‰
