@@ -35,6 +35,7 @@ library(tidyverse)
 ## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()
+
 install.packages("tidyverse")
 ## Warning: パッケージ 'tidyverse' は使用中のため、インストールされません
 ##plot　種々のグラフ
