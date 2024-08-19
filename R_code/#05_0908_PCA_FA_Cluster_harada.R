@@ -249,6 +249,12 @@ all
 
 candy_bars <- read_sav("D:/■京都府大/講義資料/■2023_R/##第5回/dataset/candy_bars.sav")
 
+#直接の場合
+candy_bars <- read.table('https://raw.githubusercontent.com/harabou/Biostat_Kyoto_pref/main/data/%2305/Candy_Bars.csv'
+                         sep = ",", 
+                  header = TRUE, 
+                  stringsAsFactors = FALSE, 
+                  fileEncoding="UTF-8")     #文字コードはUTF-8)
 
 data <- candy_bars[,8:13]
 data
