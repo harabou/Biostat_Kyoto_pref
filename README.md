@@ -9,7 +9,7 @@
 |節・タイトル|講義資料リンク|
 |---|---|
 |レジュメ|[レジュメ](https://drive.google.com/file/d/1zdiH9A7VAcAouYoUg4uwoaBJwJ_U5W4t/view?usp=drive_link)|
-|実習課題|[課題](https://drive.google.com/file/d/1Zy_7wg14otzmNXc7oUOSyTs1YWKVFzra/view?usp=sharing)|
+|実習課題|[課題](https://drive.google.com/file/d/1r9g90Y3mbDFdqUMfKbFvpJ0G_GD-xDQk/view?usp=drive_link)|
 
 <h3 id="CH02">　各回の内容の実習内容：
 <h3 id="CH03">第1日目
