@@ -36,11 +36,11 @@
 
 |実習回|講義資料リンク|
 |---|---|
-|第1回|[講義資料・解析データ](https://drive.google.com/drive/folders/17W9MJdQZ--QhhkW6ikxvw0JW3SvRgFsl?usp=sharing)|
-|第2回|[講義資料・解析データ](https://drive.google.com/drive/folders/12FUpfz8r6Niyq56dIekNTwIl-EkhuHQP?usp=sharing)|
-|第3回|[講義資料・解析データ](https://drive.google.com/drive/folders/1Y3nzc_OCyrbT3Z3V6Sww7qJHcv5qycq8?usp=sharing)|
-|第4回|[講義資料・解析データ](https://drive.google.com/drive/folders/1nQlfY9zIlsfy0o3pVJBa4FL49AvFOE9i?usp=sharing)|
-|第5回|[講義資料・解析データ](https://drive.google.com/drive/folders/1iSlN28J5SD1qsjoFsFFfVYhfygVpYAzb?usp=sharing)|
+|第1回|[講義資料・解析データ](https://drive.google.com/drive/folders/11IneQC-XaTH8mf_EwAolXTAkptgDT0RI?usp=drive_link)|
+|第2回|[講義資料・解析データ](https://drive.google.com/drive/folders/1sDNvvZH9E-HwAsLVpVRwTP0TiARpul5n?usp=drive_link)|
+|第3回|[講義資料・解析データ](https://drive.google.com/drive/folders/1H-kYlNBp7WMcUKC7fX_9bGX-UJqkzLIx?usp=drive_link)|
+|第4回|[講義資料・解析データ](https://drive.google.com/drive/folders/1lH-5fYOp_fIDCeK12B_ilF-ZPqRVeKSm?usp=drive_link)|
+|第5回|[講義資料・解析データ](https://drive.google.com/drive/folders/1ZSJKRNRhcSPszIHAU6VLnXx2RejPKNIU?usp=drive_link)|
 |補足|[Githubからのデータセット読み込み](https://drive.google.com/file/d/1Aym86YJ1HzOpzsuRsY0iTw7p5pqfHd5f/view?usp=sharing)|
 
 
