@@ -8,7 +8,7 @@
 
 |節・タイトル|講義資料リンク|
 |---|---|
-|配布データ一覧|[配布データ一覧]https://docs.google.com/spreadsheets/d/15rLII25JmMCJquDCR9QtBg86hWpz048_/edit?usp=drive_link&ouid=110559295223133930280&rtpof=true&sd=true).|
+|配布データ一覧|[配布データ一覧](https://docs.google.com/spreadsheets/d/15rLII25JmMCJquDCR9QtBg86hWpz048_/edit?usp=drive_link&ouid=110559295223133930280&rtpof=true&sd=true).|
 |レジュメ|[レジュメ](https://drive.google.com/file/d/1zdiH9A7VAcAouYoUg4uwoaBJwJ_U5W4t/view?usp=drive_link)|
 |実習課題|[課題](https://drive.google.com/file/d/1r9g90Y3mbDFdqUMfKbFvpJ0G_GD-xDQk/view?usp=drive_link)|
 
