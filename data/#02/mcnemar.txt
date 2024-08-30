@@ -1,0 +1,16 @@
+
+
+x <- matrix(c(47,16, 5, 32), ncol=2, byrow=T)
+mcnemar.test(matrix(c(47,16, 5, 32),2,2))
+
+
+
+##Exercise  
+
+x <- matrix(c(50,0, 0, 50), ncol=2, byrow=T)
+mcnemar.test(x)
+chisq.test(x)
+
+x <- matrix(c(32,48, 8, 12), ncol=2, byrow=T)
+mcnemar.test(x)
+chisq.test(x)
