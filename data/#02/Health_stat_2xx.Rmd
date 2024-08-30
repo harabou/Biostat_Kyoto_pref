@@ -1,0 +1,135 @@
+---
+title: "保健統計実習"
+author: "harada"
+date: "2024-07-28"
+output: html_document
+---
+
+
+#保健統計学実習　演習課題 Rによる解析
+
+#1日目
+
+```{r s1}
+#Healthを用いた解析
+#health dataの読み込み
+healthc <-read.csv('https://raw.githubusercontent.com/harabou/Biostat_Kyoto_pref/main/data/%2301/health3.csv')
+```
+
+##Tableone
+
+```{r s2}
+library(tableone)
+install.packages("tableone")
+
+tbl_1 <- CreateTableOne(vars = c("sex","age", "sbp","dbp","salt","HTN_c"), strata="sex",factorVars=c("sex","HTN_c"),data = healthc)
+
+tbl_1
+```
+
+##tidyverse グラフ
+
+```{r 3}
+
+library(tidyverse)
+
+##plot
+g_point_2 <- ggplot(data= healthc, aes(x = sbp, y = dbp))+geom_point () +theme_classic()
+g_point_2
+
+##boxplot　箱ひげ図
+g_box<- ggplot(data= healthc, aes(x = factor(sex), y = sbp))+geom_boxplot()
+g_box
+
+##histgram　ヒストグラ???
+g_hist<- ggplot(data= healthc, aes(x = age)) +geom_histogram(fill="white", color="black")+theme_classic()
+g_hist
+
+##violinplot　
+g_vp<-ggplot(data= healthc, mapping = aes(x = factor(sex), y = sbp)) +
+  geom_violin() +
+  geom_point() +
+  labs(title = "sex") +
+  theme_bw() + theme(legend.key = element_blank())
+
+g_vp
+```
+
+##相関 Correlation
+
+```{r 4}
+attach(healthc)
+cor(cbind(sbp, dbp))
+cor.test(sbp, dbp)
+cor(sbp , dbp, method="spearman")
+cor(sbp , dbp, method="pearson")
+
+quant<-cbind (healthc$age, healthc$sbp, healthc$dbp, healthc$salt)
+quant2<-cbind (age, sbp, dbp, salt)
+cor(quant2)
+pairs(quant2)
+
+```
+
+#2日目
+
+##t検定
+
+##barely
+```{r ba}
+barely <- read.csv('https://raw.githubusercontent.com/harabou/Biostat_Kyoto_pref/main/data/%2302/barely.csv')
+t.test(d_chol ~ group, data=barely)
+wilcox.test(d_chol ~ group, data=barely)
+
+```
+##Darwin's corn data
+
+```{r 5}
+corn <- read.csv('https://raw.githubusercontent.com/harabou/Biostat_Kyoto_pref/main/data/%2302/darwin.csv')
+t.test(len ~ group, data=corn)
+wilcox.test(len ~ group, data=corn)
+
+
+
+
+##t-test, Wilcoxon
+t.test(len ~ group, data=corn)
+wilcox.test(len ~ group, data=corn)
+
+```
+
+
+##カイ2乗検定/Fisher's exact
+
+##クロス表型による
+
+```{r 6}
+#リューマチ薬の試験
+#セルの数字を読み込む
+
+testresults2 <- matrix( c(28,13, 14,29), nrow=2, byrow=T) 
+chisq.test(testresults2)   
+fisher.test(testresults2) 
+
+
+```
+
+```{r 62}
+rheu <- read.csv('https://raw.githubusercontent.com/harabou/Biostat_Kyoto_pref/main/data/%2302/rheu_obs.csv')
+.Table <- xtabs(~res+drug, data=rheu)
+chisq.test(.Table, correct=TRUE)
+fisher.test(.Table)
+
+```
+
+
+```{r 7}
+#マクネマー
+#腰痛有無
+mcnemar.test(matrix(c(47, 16, 5, 32), 2, 2))
+
+#両親のどちらに相談
+mcnemar.test(matrix(c(32, 48, 8, 12), 2, 2))
+
+```
+
