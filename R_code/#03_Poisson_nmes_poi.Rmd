@@ -1,0 +1,62 @@
+---
+title: "Poisson NMESdata"
+author: "harada"
+date: "2024-09-01"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## exercise
+
+You can also embed plots, for example:
+
+```{r data}
+nmes<- read.csv('https://raw.githubusercontent.com/harabou/Biostat_Kyoto_pref/main/data/%2303/NMES1988.csv')
+
+library(ggplot2)
+library(MASS)
+library(pscl)
+```
+
+
+##Poi
+```{r poi}
+ggplot(data = nmes) + aes(x = visits) + geom_histogram()
+nmes.poi <- glm(visits~hospital+health+chronic+adl+age+gender+married+school+income+insurance, data=nmes, family = poisson(link = "log"))
+
+summary(nmes.poi)
+
+### Overdispersion
+dp <- sum(residuals (nmes.poi,type="pearson")^2) / nmes.poi$df.res
+summary(nmes.poi, dispersion=dp)
+
+
+```
+
+##NB
+```{r NB}
+nmes.nb <- glm.nb(visits~hospital+health+chronic+adl+age+gender+married+school+income+insurance,data=nmes)
+summary(nmes.nb)
+```
+
+##ZIP
+```{r zip}
+nmes.zip <- zeroinfl(visits~hospital+health+chronic+adl+age+gender+married+school+income+insurance,data=nmes,dist="poisson")
+summary(nmes.zip)
+```
+
+##ZINB
+```{r zinb}
+nmes.zinb <- zeroinfl(visits~hospital+health+chronic+adl+age+gender+married+school+income+insurance, data=nmes,dist="negbin")
+summary(nmes.zinb)
+```
+
+##AIC
+```{r aic}
+c(AIC.model1=AIC(nmes.poi), AIC.model2=AIC(nmes.nb),
+  AIC.model3=AIC(nmes.zip), AIC.model4=AIC(nmes.zinb))
+```

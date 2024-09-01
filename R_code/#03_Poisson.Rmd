@@ -1,0 +1,68 @@
+---
+title: "#03_Poisson対応"
+author: "harada"
+date: "2024-09-01"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r cars}
+summary(cars)
+```
+
+
+##dataよみこみ
+```{r data}
+Dataset<- read.csv('https://raw.githubusercontent.com/harabou/Biostat_Kyoto_pref/main/data/%2303/earinfection.csv')
+
+library(ggplot2)
+library(MASS)
+library(pscl)
+```
+
+
+##Poisson
+```{r poi}
+ggplot(data = Dataset) + aes(x = infections) + geom_histogram()
+GLM.1 <- glm(infections ~ age + gender + location + swimmer, family=poisson(log), data=Dataset)
+summary(GLM.1)
+exp(coef(GLM.1))  # Exponentiated coefficients
+```
+
+### Overdispersion
+```{r over}
+dp <- sum(residuals (GLM.1,type="pearson")^2) / GLM.1$df.res
+summary(GLM.1, dispersion=dp)
+```
+
+##negative binominal
+```{r NB}
+library(MASS)
+result_nb<-glm.nb(infections~age + gender + location + swimmer, data=Dataset)
+summary(result_nb)
+exp(coef(result_nb))  # Exponentiated coefficients
+```
+
+##Zero-inflated Poisson
+```{r ZIP}
+library(pscl)
+
+result_zi <-  zeroinfl(infections~age + gender + location + swimmer, data=Dataset)
+summary(result_zi)
+```
+
+##Zero-inflated negative binominal
+```{r ZINB}
+result_zinb <- zeroinfl(infections~age + gender + location + swimmer, data=Dataset,dist="negbin")
+summary(result_zinb)
+```
+
+#AIC比較
+```{r AIC}
+c(AIC.model1=AIC(GLM.1), AIC.model2=AIC(result_nb),AIC.model3=AIC(result_zi), AIC.model4=AIC(result_zinb))
+```
