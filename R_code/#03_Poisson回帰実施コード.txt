@@ -17,6 +17,14 @@ GLM.1 <- glm(infections ~ age + gender + location + swimmer, family=poisson(log)
 summary(GLM.1)
 exp(coef(GLM.1))  # Exponentiated coefficients
 
+#‰ß•ªŽUipearsonƒJƒC‚Qæ/DF)
+sum(residuals(GLM.1,type="pearson")^2)/GLM.1$df.residual
+
+#•â³ŒvŽZ
+dp <- sum(residuals (GLM.1,type="pearson")^2) / GLM.1$df.res
+summary(GLM.1, dispersion=dp)
+
+
 
 ##negative binominal
 install.packages("MASS")
