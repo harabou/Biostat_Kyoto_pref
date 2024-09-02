@@ -1,0 +1,42 @@
+#Poisson回帰実施コード
+
+
+library(MASS, pos=18)
+library(ggplot2, pos=19)
+library(tableone, pos=20)
+
+install.packages("pscl")
+library(pscl)
+
+
+#####SPSSデータセットのインポート#####
+#####テキストファイルからデータを読み込む#####
+Dataset <- read.table("C:/Users/p220038/Desktop/##第3回/dataset/earinfection.csv", header=TRUE, sep=",", na.strings=c("", "NA"), 
+  dec=".", fill=TRUE, quote="\"", comment.char="", strip.white=TRUE, fileEncoding="UTF-8")
+GLM.1 <- glm(infections ~ age + gender + location + swimmer, family=poisson(log), data=Dataset)
+summary(GLM.1)
+exp(coef(GLM.1))  # Exponentiated coefficients
+
+
+##negative binominal
+install.packages("MASS")
+library(MASS)
+
+result_nb<-glm.nb(infections~age + gender + location + swimmer, data=Dataset)
+
+summary(result_nb)
+exp(coef(result_nb))  # Exponentiated coefficients
+
+##Zero-inflated Poisson
+install.packages("pscl")
+library(pscl)
+
+result_zi <-  zeroinfl(infections~age + gender + location + swimmer, data=Dataset)
+summary(result_zi)
+
+## Zero-inflated 　negative binominal
+result_zinb <- zeroinfl(infections~age + gender + location + swimmer, data=Dataset,dist="negbin")
+summary(result_zinb)
+
+##AIC
+c(AIC.model1=AIC(GLM.1), AIC.model2=AIC(result_nb),AIC.model3=AIC(result_zi), AIC.model4=AIC(result_zinb))
