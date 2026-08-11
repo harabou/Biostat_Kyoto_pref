@@ -1,4 +1,4 @@
-# 京都府立大_保健統計学実習（2024.8.29-9.6 計5回）
+# 京都府立大_保健統計学実習（2026.8.27-9.4 計5回）
 
 講義資料と実習用データセットは、下記１）か２）の方法でダウンロードする。
 1) Githubの「講義資料」「data」「R-code」から直接ダウンロード
@@ -8,9 +8,9 @@
 
 |節・タイトル|講義資料リンク|
 |---|---|
-|配布データ一覧|[配布データ一覧](https://docs.google.com/spreadsheets/d/15rLII25JmMCJquDCR9QtBg86hWpz048_/edit?usp=drive_link&ouid=110559295223133930280&rtpof=true&sd=true).|
-|レジュメ|[レジュメ](https://drive.google.com/file/d/1zdiH9A7VAcAouYoUg4uwoaBJwJ_U5W4t/view?usp=drive_link)|
-|実習課題|[課題](https://drive.google.com/file/d/1r9g90Y3mbDFdqUMfKbFvpJ0G_GD-xDQk/view?usp=drive_link)|
+|配布データ一覧|[配布データ一覧](https://drive.google.com/drive/folders/1ecobMkT3Nw5MxJejIWnS_yYWFyRl64MX?usp=drive_link).|
+|レジュメ|[レジュメ](https://drive.google.com/drive/folders/1ecobMkT3Nw5MxJejIWnS_yYWFyRl64MX)|
+|実習課題|[課題](https://drive.google.com/drive/folders/1ecobMkT3Nw5MxJejIWnS_yYWFyRl64MX))|
 
 <h3 id="CH02">　各回の内容の実習内容：
 <h3 id="CH03">第1日目
