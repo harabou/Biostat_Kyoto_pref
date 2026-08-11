@@ -42,6 +42,7 @@
 |第3回|[講義資料・解析データ](https://drive.google.com/drive/folders/1H-kYlNBp7WMcUKC7fX_9bGX-UJqkzLIx?usp=drive_link)|
 |第4回|[講義資料・解析データ](https://drive.google.com/drive/folders/1lH-5fYOp_fIDCeK12B_ilF-ZPqRVeKSm?usp=drive_link)|
 |第5回|[講義資料・解析データ](https://drive.google.com/drive/folders/1ZSJKRNRhcSPszIHAU6VLnXx2RejPKNIU?usp=drive_link)|
+|第5回|[pythonデータ](https://colab.research.google.com/github/harabou/Biostat_Kyoto_pref/blob/main/%2305/food_CNN_classification_学生版.ipynb)|
 |補足|[Githubからのデータセット読み込み](https://drive.google.com/file/d/1Aym86YJ1HzOpzsuRsY0iTw7p5pqfHd5f/view?usp=sharing)|
 
 
