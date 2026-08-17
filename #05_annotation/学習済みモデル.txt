@@ -1,0 +1,8 @@
+学習済みモデル
+
+「new_an-ch7ze-1-rfdetr-small-t1」モデル
+https://app.roboflow.com/s-workspace-2o1en/new_an-ch7ze/models/s-workspace-2o1en/new_an-ch7ze-1-rfdetr-small-t1
+
+
+「-9osjl-3-rfdetr-small-t1」モデル
+https://app.roboflow.com/s-workspace-2o1en/-9osjl/models/s-workspace-2o1en/-9osjl-3-rfdetr-small-t1
