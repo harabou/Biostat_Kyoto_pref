@@ -8,9 +8,8 @@
 
 |節・タイトル|講義資料リンク|
 |---|---|
-|配布データ一覧|[配布データ一覧](https://docs.google.com/spreadsheets/d/15rLII25JmMCJquDCR9QtBg86hWpz048_/edit?usp=drive_link&ouid=110559295223133930280&rtpof=true&sd=true).|
+|配布データ一覧|[配布データ一覧](https://drive.google.com/drive/folders/1ecobMkT3Nw5MxJejIWnS_yYWFyRl64MX?usp=sharing).|
 |レジュメ|[レジュメ](https://drive.google.com/file/d/1dtkvqzkZJVfH4EztYp6sdyIfs0axZ8_C/view?usp=drive_link)|
-|実習課題|[課題](https://drive.google.com/drive/folders/1ecobMkT3Nw5MxJejIWnS_yYWFyRl64MX)|
 
 <h3 id="CH02">　各回の内容の実習内容：
 <h3 id="CH03">第1日目
@@ -37,7 +36,7 @@
 
 |実習回|講義資料リンク|
 |---|---|
-|第1回|[講義資料・解析データ](https://drive.google.com/drive/folders/11IneQC-XaTH8mf_EwAolXTAkptgDT0RI?usp=drive_link)|
+|第1回|[講義資料・解析データ](https://drive.google.com/drive/folders/11IneQC-XaTH8mf_EwAolXTAkptgDT0RI)|
 |第2回|[講義資料・解析データ](https://drive.google.com/drive/folders/1sDNvvZH9E-HwAsLVpVRwTP0TiARpul5n?usp=drive_link)|
 |第3回|[講義資料・解析データ](https://drive.google.com/drive/folders/1H-kYlNBp7WMcUKC7fX_9bGX-UJqkzLIx?usp=drive_link)|
 |第4回|[講義資料・解析データ](https://drive.google.com/drive/folders/1lH-5fYOp_fIDCeK12B_ilF-ZPqRVeKSm?usp=drive_link)|
