@@ -41,8 +41,9 @@
 |第3回|[講義資料・解析データ](https://drive.google.com/drive/folders/1H-kYlNBp7WMcUKC7fX_9bGX-UJqkzLIx?usp=drive_link)|
 |第4回|[講義資料・解析データ](https://drive.google.com/drive/folders/1lH-5fYOp_fIDCeK12B_ilF-ZPqRVeKSm?usp=drive_link)|
 |第5回|[講義資料・解析データ](https://drive.google.com/drive/folders/1ZSJKRNRhcSPszIHAU6VLnXx2RejPKNIU?usp=drive_link)|
-|第5回|[pythonデータ（CNN)](https://colab.research.google.com/github/harabou/Biostat_Kyoto_pref/blob/main/%2305/food_CNN_classification_学生版.ipynb)|
-|第5回|[pythonデータ（YOLO）](https://colab.research.google.com/github/harabou/Biostat_Kyoto_pref/blob/main/%2305/food_YOLO_exercise.ipynb)|
+|第5回|[pythonデータ（MNIST)](https://colab.research.google.com/drive/1w-g36kgpS0uOk-PT3AF5uSQdZ_ZtTzn7)|
+|第5回|[pythonデータ（CNN)](https://colab.research.google.com/drive/1VxJQkv1AkyxMngEcAq5kzOka05pL9iA2)|
+|第5回|[pythonデータ（YOLO）](https://colab.research.google.com/drive/1PTtY0nIGAUZi817iLxQEeMvS_krH3lva)|
 |補足|[Githubからのデータセット読み込み](https://drive.google.com/file/d/1Aym86YJ1HzOpzsuRsY0iTw7p5pqfHd5f/view?usp=sharing)|
 
 
