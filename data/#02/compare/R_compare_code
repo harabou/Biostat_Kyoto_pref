@@ -1,0 +1,9 @@
+
+ae <-read.csv('https://raw.githubusercontent.com/harabou/Biostat_Kyoto_pref/main/data/%2303/compare/ae.csv')
+ae2 <-read.csv('https://raw.githubusercontent.com/harabou/Biostat_Kyoto_pref/main/data/%2303/compare/ae2.csv')
+
+install.packages("arsenal")
+
+library(arsenal)
+comparedf(ae, ae2)
+summary(comparedf(ae, ae2))
