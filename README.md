@@ -46,6 +46,11 @@
 |第5回|[pythonデータ（YOLO）](https://colab.research.google.com/drive/1PTtY0nIGAUZi817iLxQEeMvS_krH3lva)|
 |補足|[Githubからのデータセット読み込み](https://drive.google.com/file/d/1Aym86YJ1HzOpzsuRsY0iTw7p5pqfHd5f/view?usp=sharing)|
 
+|調査票LINK|[LINK](https://docs.google.com/spreadsheets/d/1uRCJ-5k9was34WlHHH1EWX-xuBHrq9gZKWNW2ZselUw/edit?usp=sharing)|
+
+|Deeplearning|[playground.tensorflow](https://playground.tensorflow.org/).|
+
+
 
 <h2 id="CH01">3　参考資料</h2>
 
