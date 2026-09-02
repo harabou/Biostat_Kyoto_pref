@@ -1,0 +1,13 @@
+##k-means
+
+km<-kmeans(data,4)
+result2 <- km$cluster
+write.csv(result2,"result2.csv")
+
+＃plot
+library(cluster)
+clusplot(data, km$cluster, color=TRUE, shade=TRUE, labels=2, lines=0)
+
+#data出力 
+table2 <- table(answer, result2)
+write.csv(table2,"table2.csv")
