@@ -57,3 +57,8 @@
 |内容|リンク|
 |---|---|
 |EZR|[EZR解説](https://drive.google.com/file/d/1q1gDk043NU8RZRZIoUrLRygsSDP2Ij-Z/view?usp=drive_link)|
+
+
+
+<h2 id="CH01">3　演習後アンケート</h2>
+|Google form|[LINK先](https://forms.gle/TeVtxmQocaKWDYW98).|
