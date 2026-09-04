@@ -44,7 +44,7 @@
 |第5回|[pythonデータ（MNIST)](https://colab.research.google.com/drive/1w-g36kgpS0uOk-PT3AF5uSQdZ_ZtTzn7)|
 |第5回|[pythonデータ（CNN)](https://colab.research.google.com/drive/1VxJQkv1AkyxMngEcAq5kzOka05pL9iA2)|
 |第5回|[pythonデータ（CNN_自己学習)](https://colab.research.google.com/github/harabou/Biostat_Kyoto_pref/blob/main/data/%2305/food_CNN_classification_%E8%87%AA%E5%B7%B1%E5%AD%A6%E7%BF%92%E7%89%88.ipynb?hl=ja)|
-|第5回|[pythonデータ（YOLO）](https://colab.research.google.com/drive/1PTtY0nIGAUZi817iLxQEeMvS_krH3lva)|
+|第5回|[pythonデータ（YOLO）](https://colab.research.google.com/github/harabou/Biostat_Kyoto_pref/blob/main/data/%2305/food_YOLO_exercise.ipynb)|
 |補足|[Githubからのデータセット読み込み](https://drive.google.com/file/d/1Aym86YJ1HzOpzsuRsY0iTw7p5pqfHd5f/view?usp=sharing)|
 
 |調査票LINK|[LINK](https://docs.google.com/spreadsheets/d/1uRCJ-5k9was34WlHHH1EWX-xuBHrq9gZKWNW2ZselUw/edit?usp=sharing)|
